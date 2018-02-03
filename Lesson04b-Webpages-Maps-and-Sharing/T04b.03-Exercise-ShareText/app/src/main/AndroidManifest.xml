@@ -11,10 +11,12 @@
         <activity android:name="com.example.android.implicitintents.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
+                <action android:name="android.intent.action.SET_ALARM"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
 
 </manifest>
