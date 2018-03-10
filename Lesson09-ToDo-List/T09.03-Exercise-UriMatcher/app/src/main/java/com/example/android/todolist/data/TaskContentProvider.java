@@ -30,8 +30,8 @@ public class TaskContentProvider extends ContentProvider {
     // DONE (1) Define final integer constants for the directory of tasks and a single item.
     // It's convention to use 100, 200, 300, etc for directories,
     // and related ints (101, 102, ..) for items in that directory.
-    static final int TASKS_DIRECTORY = 100;
-    static final int SINGLE_TASK = 101;
+    static final int TASKS = 100;
+    static final int TASK_WITH_ID = 101;
 
     // DONE (3) Declare a static variable for the Uri matcher that you construct
     static UriMatcher uMatcher;
@@ -40,8 +40,8 @@ public class TaskContentProvider extends ContentProvider {
     public static UriMatcher buildUriMatcher(){
         UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
-        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS, TASKS_DIRECTORY);
-        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS + "/#", SINGLE_TASK);
+        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS, TASKS);
+        uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS + "/#", TASK_WITH_ID);
 
         return uriMatcher;
     }
