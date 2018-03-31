@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         mBinding.textViewBoardingTime.setText(formatter.format(info.boardingTime.toString()));
         mBinding.textViewDepartureTime.setText(formatter.format(info.departureTime.toString()));
         // TODO (8) Use TimeUnit methods to format the total minutes until boarding
+        
                 mBinding.textViewBoardingInCountdown.setText(String.format(Locale.US,"%d",
                 info.getMinutesUntilBoarding()));
     }
